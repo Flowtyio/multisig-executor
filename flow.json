@@ -1,0 +1,32 @@
+{
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "a9cb6db0a510a669524a8d31bc43d9d3297c1bdd3defe2826fd36f9a4b5c4bcb"
+		},
+		"emulator-ft": {
+			"address": "ee82856bf20e2aa6",
+			"key": "686779d775e5fcbf8d2f4a85cb4c53525d02b7ef53230d180fc16f35d9b7d025"
+		}
+	},
+	"contracts": {
+		"MultiSigAccount": "./contracts/MultiSigAccount.cdc",
+		"FungibleToken": "./contracts/standard/FungibleToken.cdc"
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"MultiSigAccount"
+			],
+			"emulator-ft": [
+				"FungibleToken"
+			]
+		}
+	}
+}
